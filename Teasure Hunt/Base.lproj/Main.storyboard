@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4yj-ek-hrM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -8,15 +8,64 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="cEL-PB-NZR">
+            <objects>
+                <viewController id="4yj-ek-hrM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hYQ-BV-EhJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="89733" translatesAutoresizingMaskIntoConstraints="NO" id="M1g-J8-8IM">
+                                <rect key="frame" x="0.0" y="0.0" width="414.00000000000091" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ow3-qp-3Ed">
+                                <rect key="frame" x="49" y="324" width="317" height="249"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Treasure Hunt is an outdoor recreational activity, in which participants use a mobile device to hide and seek containers, called "geocaches" or "caches", at specific locations marked by coordinates all over the United States.</string>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tB8-Dr-nAD">
+                                <rect key="frame" x="129" y="581" width="156" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Treasure Hunting"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="lNx-Yb-7XC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Treasure Hunt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acn-fl-AsT">
+                                <rect key="frame" x="98" y="255" width="219" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="M1g-J8-8IM" secondAttribute="bottom" id="F2V-eG-xLT"/>
+                            <constraint firstItem="M1g-J8-8IM" firstAttribute="trailing" secondItem="4IT-44-L0r" secondAttribute="trailing" id="SSE-S7-dST"/>
+                            <constraint firstItem="M1g-J8-8IM" firstAttribute="leading" secondItem="4IT-44-L0r" secondAttribute="leading" id="d7v-8y-pfG"/>
+                            <constraint firstItem="M1g-J8-8IM" firstAttribute="top" secondItem="hYQ-BV-EhJ" secondAttribute="top" id="hwb-lz-f0g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4IT-44-L0r"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YCK-up-Mke" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-888.40579710144937" y="126.5625"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Teasure_Hunt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="w4o-II-tSZ">
-                                <rect key="frame" x="93.5" y="831" width="227" height="32"/>
+                                <rect key="frame" x="93.5" y="777" width="227" height="32"/>
                                 <segments>
                                     <segment title="Standard"/>
                                     <segment title="Satellite"/>
@@ -24,12 +73,12 @@
                                 </segments>
                             </segmentedControl>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3S-UX-lrL">
-                                <rect key="frame" x="0.0" y="44" width="414" height="787"/>
+                                <rect key="frame" x="0.0" y="-44" width="414" height="821"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="a3S-UX-lrL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2Wb-QQ-tmp"/>
+                            <constraint firstItem="a3S-UX-lrL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="2Wb-QQ-tmp"/>
                             <constraint firstItem="w4o-II-tSZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ive-Kp-1cN"/>
                             <constraint firstItem="a3S-UX-lrL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KV1-Dh-R1Q"/>
                             <constraint firstItem="w4o-II-tSZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VZK-PG-Vfd"/>
@@ -44,4 +93,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="89733" width="3490" height="4887"/>
+    </resources>
 </document>

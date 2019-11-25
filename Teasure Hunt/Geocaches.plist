@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Geocache 1</key>
+	<string></string>
+	<key>Name</key>
+	<string>Cache 1</string>
+	<key>Latitude</key>
+	<real>36.033773</real>
+	<key>Longitude</key>
+	<real>-95.980464</real>
+</dict>
+</plist>
