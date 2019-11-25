@@ -64,29 +64,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="w4o-II-tSZ">
-                                <rect key="frame" x="93.5" y="777" width="227" height="32"/>
-                                <segments>
-                                    <segment title="Standard"/>
-                                    <segment title="Satellite"/>
-                                    <segment title="Hybrid"/>
-                                </segments>
-                            </segmentedControl>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3S-UX-lrL">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3S-UX-lrL">
                                 <rect key="frame" x="0.0" y="-44" width="414" height="821"/>
                             </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vJh-0k-yUU" userLabel="Navigation Stackview">
+                                <rect key="frame" x="53" y="778" width="308" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofE-Cd-ibQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="73" height="31"/>
+                                        <state key="normal" title="Close Map"/>
+                                        <connections>
+                                            <action selector="closeMapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s83-fK-zV1"/>
+                                        </connections>
+                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="w4o-II-tSZ">
+                                        <rect key="frame" x="81" y="0.0" width="227" height="32"/>
+                                        <segments>
+                                            <segment title="Standard"/>
+                                            <segment title="Satellite"/>
+                                            <segment title="Hybrid"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="mapChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="42B-sZ-69i"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="a3S-UX-lrL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="2Wb-QQ-tmp"/>
-                            <constraint firstItem="w4o-II-tSZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ive-Kp-1cN"/>
-                            <constraint firstItem="a3S-UX-lrL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KV1-Dh-R1Q"/>
-                            <constraint firstItem="w4o-II-tSZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VZK-PG-Vfd"/>
-                            <constraint firstItem="w4o-II-tSZ" firstAttribute="top" secondItem="a3S-UX-lrL" secondAttribute="bottom" id="egF-sd-RuW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a3S-UX-lrL" secondAttribute="trailing" id="gOf-F7-jxd"/>
+                            <constraint firstItem="vJh-0k-yUU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0zh-Ye-7dU"/>
+                            <constraint firstItem="a3S-UX-lrL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-54.5" id="2j4-84-Iwf"/>
+                            <constraint firstItem="a3S-UX-lrL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="I67-5W-0HX"/>
+                            <constraint firstItem="a3S-UX-lrL" firstAttribute="centerX" secondItem="vJh-0k-yUU" secondAttribute="centerX" id="KSS-lg-tXN"/>
+                            <constraint firstItem="a3S-UX-lrL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LMS-fp-lPT"/>
+                            <constraint firstItem="a3S-UX-lrL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="dIZ-Cx-2Oc"/>
+                            <constraint firstItem="vJh-0k-yUU" firstAttribute="top" secondItem="a3S-UX-lrL" secondAttribute="bottom" constant="1" id="g8y-2S-YLJ"/>
+                            <constraint firstAttribute="bottom" secondItem="vJh-0k-yUU" secondAttribute="bottom" constant="33" id="qG6-iA-ah5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="a3S-UX-lrL" id="2xa-gc-toT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
