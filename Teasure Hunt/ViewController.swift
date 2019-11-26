@@ -51,3 +51,29 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
 }
 
+//class cachesLocations: NSObject {
+//
+//    let location: CLLocation
+//      let name: String
+//
+//      init(latitude: Double, longitude: Double, name: String) {
+//        location = CLLocation(latitude: latitude, longitude:   longitude)
+//        self.name = name
+//
+//      }
+//
+//    }
+//
+//    extension cachesLocations: MKAnnotation {
+//      var coordinate: CLLocationCoordinate2D {
+//        get {
+//          return location.coordinate
+//        }
+//      }
+//      var title: String? {
+//        get {
+//          return name
+//        }
+//      }
+//}
+

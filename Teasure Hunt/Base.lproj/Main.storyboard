@@ -18,36 +18,41 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="89733" translatesAutoresizingMaskIntoConstraints="NO" id="M1g-J8-8IM">
                                 <rect key="frame" x="0.0" y="0.0" width="414.00000000000091" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ow3-qp-3Ed">
-                                <rect key="frame" x="49" y="324" width="317" height="249"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Treasure Hunt is an outdoor recreational activity, in which participants use a mobile device to hide and seek containers, called "geocaches" or "caches", at specific locations marked by coordinates all over the United States.</string>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tB8-Dr-nAD">
-                                <rect key="frame" x="129" y="581" width="156" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Treasure Hunting"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="lNx-Yb-7XC"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Treasure Hunt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acn-fl-AsT">
-                                <rect key="frame" x="98" y="255" width="219" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="39"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="MtA-RG-qY5">
+                                <rect key="frame" x="47" y="196.5" width="320" height="503.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treasure Hunt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acn-fl-AsT">
+                                        <rect key="frame" x="22.5" y="0.0" width="275" height="53.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="49"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="14" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="ow3-qp-3Ed">
+                                        <rect key="frame" x="0.0" y="123.5" width="320" height="274"/>
+                                        <string key="text">Treasure Hunt is an outdoor recreational activity, in which participants use a mobile device to hide and seek containers, called "geocaches" or "caches", at specific locations marked by coordinates all over the United States.</string>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tB8-Dr-nAD">
+                                        <rect key="frame" x="62.5" y="467.5" width="195" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Start Treasure Hunting"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="MapSegue" id="lNx-Yb-7XC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="M1g-J8-8IM" secondAttribute="bottom" id="F2V-eG-xLT"/>
-                            <constraint firstItem="M1g-J8-8IM" firstAttribute="trailing" secondItem="4IT-44-L0r" secondAttribute="trailing" id="SSE-S7-dST"/>
-                            <constraint firstItem="M1g-J8-8IM" firstAttribute="leading" secondItem="4IT-44-L0r" secondAttribute="leading" id="d7v-8y-pfG"/>
-                            <constraint firstItem="M1g-J8-8IM" firstAttribute="top" secondItem="hYQ-BV-EhJ" secondAttribute="top" id="hwb-lz-f0g"/>
+                            <constraint firstItem="MtA-RG-qY5" firstAttribute="centerY" secondItem="hYQ-BV-EhJ" secondAttribute="centerY" id="A5R-mg-brK"/>
+                            <constraint firstItem="M1g-J8-8IM" firstAttribute="leading" secondItem="4IT-44-L0r" secondAttribute="leading" id="JMP-1a-zWU"/>
+                            <constraint firstAttribute="bottom" secondItem="M1g-J8-8IM" secondAttribute="bottom" id="Wgp-21-0fe"/>
+                            <constraint firstAttribute="trailing" secondItem="M1g-J8-8IM" secondAttribute="trailing" id="dPA-Wb-5ED"/>
+                            <constraint firstItem="MtA-RG-qY5" firstAttribute="centerX" secondItem="hYQ-BV-EhJ" secondAttribute="centerX" id="gqG-D1-yEk"/>
+                            <constraint firstItem="M1g-J8-8IM" firstAttribute="top" secondItem="hYQ-BV-EhJ" secondAttribute="top" id="sw8-yP-enX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4IT-44-L0r"/>
                     </view>
@@ -64,11 +69,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3S-UX-lrL">
-                                <rect key="frame" x="0.0" y="-44" width="414" height="821"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3S-UX-lrL">
+                                <rect key="frame" x="0.0" y="-44" width="414" height="831"/>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vJh-0k-yUU" userLabel="Navigation Stackview">
-                                <rect key="frame" x="53" y="778" width="308" height="31"/>
+                                <rect key="frame" x="53" y="785" width="308" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofE-Cd-ibQ">
                                         <rect key="frame" x="0.0" y="0.0" width="73" height="31"/>
@@ -94,13 +99,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="vJh-0k-yUU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0zh-Ye-7dU"/>
-                            <constraint firstItem="a3S-UX-lrL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-54.5" id="2j4-84-Iwf"/>
+                            <constraint firstItem="a3S-UX-lrL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-49.5" id="2j4-84-Iwf"/>
                             <constraint firstItem="a3S-UX-lrL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="I67-5W-0HX"/>
                             <constraint firstItem="a3S-UX-lrL" firstAttribute="centerX" secondItem="vJh-0k-yUU" secondAttribute="centerX" id="KSS-lg-tXN"/>
                             <constraint firstItem="a3S-UX-lrL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LMS-fp-lPT"/>
                             <constraint firstItem="a3S-UX-lrL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="dIZ-Cx-2Oc"/>
-                            <constraint firstItem="vJh-0k-yUU" firstAttribute="top" secondItem="a3S-UX-lrL" secondAttribute="bottom" constant="1" id="g8y-2S-YLJ"/>
-                            <constraint firstAttribute="bottom" secondItem="vJh-0k-yUU" secondAttribute="bottom" constant="33" id="qG6-iA-ah5"/>
+                            <constraint firstItem="vJh-0k-yUU" firstAttribute="top" secondItem="a3S-UX-lrL" secondAttribute="bottom" constant="-2" id="g8y-2S-YLJ"/>
+                            <constraint firstAttribute="bottom" secondItem="vJh-0k-yUU" secondAttribute="bottom" constant="26" id="qG6-iA-ah5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
